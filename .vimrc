@@ -5,6 +5,13 @@ set encoding=utf-8
 " Turn on syntax highlighting
 syntax on
 
+" Enable Powerline
+set rtp+=/usr/local/home/bzhang/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
+" Use 256 colors
+set t_Co=256
+
 " used for command line completion
 set wildmenu
 set wildmode=list:longest,full
@@ -20,6 +27,10 @@ set shiftwidth=4
 " Show line numbers
 set number
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 "------------------------------------------------------
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -33,6 +44,10 @@ Plugin 'ycm-core/YouCompleteMe'
 
 " NERDtree
 Plugin 'scrooloose/nerdtree'
+
+" Powerline is a statusline plugin for vim, and provides
+" statuslines and prompts for serveral other applications
+Plugin 'powerline/powerline'
 
 
 " All of your Plugins must be added before the following line
