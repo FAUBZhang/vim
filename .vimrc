@@ -45,9 +45,6 @@ Plugin 'ycm-core/YouCompleteMe'
 " NERDtree
 Plugin 'scrooloose/nerdtree'
 
-" Powerline is a statusline plugin for vim, and provides
-" statuslines and prompts for serveral other applications
-Plugin 'powerline/powerline'
 
 
 " All of your Plugins must be added before the following line
