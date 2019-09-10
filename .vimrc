@@ -57,6 +57,8 @@ Plugin 'scrooloose/nerdtree'
 " Syntax checking hacks for vim
 Plugin 'syntastic'
 
+" Tagbar a class outline viewer for vim
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
@@ -65,3 +67,4 @@ filetype plugin indent on	" required
 
 " Shortcuts
 map <F2> :NERDTreeToggle<CR>
+map <F8> :TagbarToggle<CR>
