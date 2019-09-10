@@ -12,6 +12,15 @@ set laststatus=2
 " Use 256 colors
 set t_Co=256
 
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " used for command line completion
 set wildmenu
 set wildmode=list:longest,full
@@ -45,6 +54,8 @@ Plugin 'ycm-core/YouCompleteMe'
 " NERDtree
 Plugin 'scrooloose/nerdtree'
 
+" Syntax checking hacks for vim
+Plugin 'syntastic'
 
 
 " All of your Plugins must be added before the following line
