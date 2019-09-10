@@ -32,6 +32,11 @@ let g:tagbar_type_r = {
     \ ]
 \ }
 
+" CtrlP settings:
+" Change the default mapping and the default command to invoke CtrlP:
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " used for command line completion
 set wildmenu
 set wildmode=list:longest,full
@@ -59,7 +64,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" a code-completion engine for Vim
+" a code-completion engine for vim
 Plugin 'ycm-core/YouCompleteMe'
 
 " NERDtree
@@ -70,6 +75,9 @@ Plugin 'syntastic'
 
 " Tagbar a class outline viewer for vim
 Plugin 'majutsushi/tagbar'
+
+" CtrlP full path fuzzy file, buffer, mru, tag, etc finder for vim
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
