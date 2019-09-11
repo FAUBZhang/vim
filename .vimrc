@@ -5,23 +5,20 @@ set encoding=utf-8
 " Turn on syntax highlighting
 syntax on
 
-" Enable Powerline
+" Powerline config
 set rtp+=/usr/local/home/bzhang/.local/lib/python3.6/site-packages/powerline/bindings/vim/
 " Always show statusline
 set laststatus=2
 " Use 256 colors
 set t_Co=256
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" deoplete config:
+let g:deoplete#enable_at_startup = 1
 
-" Tagbar settings:
+" Ale config:
+
+
+" Tagbar config:
 " R filetypes:
 let g:tagbar_type_r = {
     \ 'ctagstype' : 'r',
@@ -32,7 +29,7 @@ let g:tagbar_type_r = {
     \ ]
 \ }
 
-" CtrlP settings:
+" CtrlP config:
 " Change the default mapping and the default command to invoke CtrlP:
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -64,19 +61,27 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" a code-completion engine for vim
+" YouCompleteMe: A code-completion engine for vim
 Plugin 'ycm-core/YouCompleteMe'
 
 " NERDtree
 Plugin 'scrooloose/nerdtree'
 
-" Syntax checking hacks for vim
-Plugin 'syntastic'
+" Ale: Check syntax in Vim asynchronously and fix files,
+" with Language Server Protocol (LSP) support
+Plugin 'dense-analysis/ale'
 
-" Tagbar a class outline viewer for vim
+" deoplete: Dark powered asynchronous completion framework for newvim/vim8
+Plugin 'Shougo/deoplete.nvim'
+" nvim-yarp: Yet Another Remote Plugin Framework for Neovim
+Plugin 'roxma/nvim-yarp'
+" vim-hug-neovim-rpc: EXPERIMENTAL
+Plugin 'roxma/vim-hug-neovim-rpc'
+
+" Tagbar: A class outline viewer for vim
 Plugin 'majutsushi/tagbar'
 
-" CtrlP full path fuzzy file, buffer, mru, tag, etc finder for vim
+" CtrlP: Full path fuzzy file, buffer, mru, tag, etc finder for vim
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
