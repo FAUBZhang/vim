@@ -14,6 +14,7 @@ set t_Co=256
 
 " deoplete config:
 let g:deoplete#enable_at_startup = 1
+set completeopt+=noinsert
 
 " Ale config:
 
@@ -61,9 +62,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" YouCompleteMe: A code-completion engine for vim
-Plugin 'ycm-core/YouCompleteMe'
-
 " NERDtree
 Plugin 'scrooloose/nerdtree'
 
@@ -84,6 +82,9 @@ Plugin 'majutsushi/tagbar'
 " CtrlP: Full path fuzzy file, buffer, mru, tag, etc finder for vim
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" yapf: A formatter for Python files
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
 filetype plugin indent on	" required
@@ -92,3 +93,13 @@ filetype plugin indent on	" required
 " Shortcuts
 map <F2> :NERDTreeToggle<CR>
 map <F8> :TagbarToggle<CR>
+map <C-Y> :call yapf#YAPF()<cr>
+imap <C-Y> <c-o> :call yapf#YAPF()<cr>
+inoremap <silent><expr> <TAB>
+		\ pumvisible() ? "\<C-n>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ deoplete#manual_complete()
+		function! s:check_back_space() abort "{{{
+		let col = col('.') - 1
+		return !col || getline('.')[col - 1]  =~ '\s'
+		endfunction"}}}
