@@ -6,14 +6,15 @@ set encoding=utf-8
 syntax on
 
 " Powerline config
-set rtp+=/usr/local/home/bzhang/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+"set rtp+=/usr/local/home/bzhang/anaconda3/pkgs/powerline-status-2.7-py37h14c3975_1000/lib/python3.7/site-packages/powerline/bindings/vim/
+"set rtp+=/usr/local/home/bzhang/.local/lib/python3.6/site-packages/powerline/bindings/vim/
 " Always show statusline
-set laststatus=2
+"set laststatus=2
 " Use 256 colors
-set t_Co=256
+"set t_Co=256
 
 " deoplete config:
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 set completeopt+=noinsert
 
 " Ale config:
@@ -69,7 +70,7 @@ Plugin 'scrooloose/nerdtree'
 " with Language Server Protocol (LSP) support
 Plugin 'dense-analysis/ale'
 
-" deoplete: Dark powered asynchronous completion framework for newvim/vim8
+" deoplete: Dark powered asynchronous completion framework for neovim/vim8
 Plugin 'Shougo/deoplete.nvim'
 " nvim-yarp: Yet Another Remote Plugin Framework for Neovim
 Plugin 'roxma/nvim-yarp'
@@ -84,6 +85,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 " yapf: A formatter for Python files
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+
+" vim-airline: lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
