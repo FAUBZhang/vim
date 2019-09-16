@@ -3,6 +3,8 @@ filetype off		" required
 
 set number		" add line numbers
 
+" Powerline config
+
 syntax on		" syntax highlighting
 
 "-----------------------------------------------------------
@@ -17,6 +19,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 " NERDtree
 Plugin 'scrooloose/nerdtree'
+
+" vim-airline: lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
