@@ -27,6 +27,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " Tagbar: A class outline viewer for vim
 Plugin 'majutsushi/tagbar'
 
+" yapf: A formatter for Python files
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
 filetype plugin indent on	" required
@@ -37,3 +40,5 @@ filetype plugin indent on	" required
 " Shortcuts
 map <F2> :NERDTreeToggle<CR>
 map <F8> :TagbarToggle<CR>
+map <C-Y> :call yapf#YAPF()<CR>
+imap <C-Y> <c-o> :call yapf#YAPF()<CR>
