@@ -3,7 +3,10 @@ filetype off		" required
 
 set number		" add line numbers
 
-" Powerline config
+" CtrlP config:
+" Change the default mapping and the default command to invoke CtrlP:
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 syntax on		" syntax highlighting
 
@@ -29,6 +32,9 @@ Plugin 'majutsushi/tagbar'
 
 " yapf: A formatter for Python files
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+
+" CtrlP: Full path fuzzy file, buffer, mru, tag, etc finder for vim
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
